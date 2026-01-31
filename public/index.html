@@ -421,14 +421,17 @@
     /* Discover */
     .discover { flex: 1; display: flex; flex-direction: column; }
     .discover.hidden { display: none; }
-    .swipe-area { flex: 1; position: relative; padding: 20px; overflow: hidden; }
-    .card-stack { position: relative; height: 100%; max-width: 400px; margin: 0 auto; }
+    .swipe-area { flex: 1; position: relative; padding: 20px; overflow: hidden; min-height: 400px; }
+    .card-stack { position: relative; height: 100%; min-height: 350px; max-width: 400px; margin: 0 auto; }
     .swipe-card {
       position: absolute;
-      inset: 0;
-      background: rgba(255, 255, 255, 0.05);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(20px);
-      border: 1px solid var(--border-color);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: var(--radius-xl);
       overflow: hidden;
       cursor: grab;
